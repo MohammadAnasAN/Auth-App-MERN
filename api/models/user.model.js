@@ -14,6 +14,10 @@ const userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:true,
+    },
+    profilePicture:{
+        type:String,
+        default:"https://tse4.explicit.bing.net/th?id=OIP.audMX4ZGbvT2_GJTx2c4GgHaHw&pid=Api&P=0&h=180",
     }
 },{timestamps:true});
 
