@@ -1,11 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from 'firebase/storage';
+import {getDownloadURL,getStorage,ref,uploadBytesResumable,} from 'firebase/storage';
 import { app } from '../firebase';
 import { useDispatch } from 'react-redux';
 import {
@@ -73,13 +68,16 @@ export default function Profile() {
         },
         body: JSON.stringify(formData),
       });
+
       const data = await res.json();
       if (data.success === false) {
         dispatch(updateUserFailure(data));
         return;
       }
+
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
+
     } catch (error) {
       dispatch(updateUserFailure(error));
     }
