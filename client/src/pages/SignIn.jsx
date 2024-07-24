@@ -47,8 +47,8 @@ export default function Signin() {
   }
 
   return (
-    <div className='p-3 max-w-lg mx-auto' >
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
+    <div className='p-3 max-w-lg mx-auto ' >
+      <h1 className='text-3xl text-center font-semibold my-7'>SignIn Page</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
 
         <input type='text' placeholder='Email' id='email' 
@@ -61,7 +61,7 @@ export default function Signin() {
 
         <button disabled={loading} className='bg-indigo-600 text-white p-3
          rounded-lg uppercase hover:opacity-90'>
-          {loading?'Loading...':'SignUp'}
+          {loading?'Loading...':'SignIn'}
         </button>
         <OAuth/>
 
